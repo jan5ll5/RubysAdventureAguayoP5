@@ -55,10 +55,10 @@ public class RubyController : MonoBehaviour
         if (amount < 0)
         {
             if (isInvincible)
-                return
+                return;
 
             isInvincible = true;
-            invincibletimer
+            //invincibletimer
         }
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
