@@ -7,6 +7,7 @@ public class RubyController : MonoBehaviour
     public float speed = 3.0f;
     
     public int maxHealth = 5;
+    public float timeInvincible = 2.0f;
 
     public int health { get { return currentHealth; } }
     int currentHealth;
@@ -55,10 +56,10 @@ public class RubyController : MonoBehaviour
         if (amount < 0)
         {
             if (isInvincible)
-                return
+                return;
 
             isInvincible = true;
-            invincibletimer
+            invincibleTimer = timeInvincible;
         }
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
