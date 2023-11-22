@@ -5,7 +5,7 @@ using UnityEngine;
 public class RubyController : MonoBehaviour
 {
     public float speed = 3.0f;
-    
+
     public int maxHealth = 5;
     public float timeInvincible = 2.0f;
 
@@ -38,7 +38,7 @@ public class RubyController : MonoBehaviour
         vertical = Input.GetAxis("Vertical");
 
         Vector2 move = new Vector2(horizontal, vertical);
-            
+
         if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
         {
             lookDirection.Set(move.x, move.y);
@@ -52,7 +52,7 @@ public class RubyController : MonoBehaviour
         if (isInvincible)
         {
             invincibleTimer -= Time.deltaTime;
-            if (invincibleTimer < 0 )
+            if (invincibleTimer < 0)
                 isInvincible = false;
         }
     }
@@ -81,4 +81,9 @@ public class RubyController : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
     }
+    void Launch()
+    {
+        GameObject projectile O
+    }
 }
+
