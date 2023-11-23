@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    // Start is called before the first frame update
     Rigidbody2D rigidbody2d;
+
+    // Start is called before the first frame update
+    
 
     void Awake()
     {
-        rigidbody2d = GetComponent<Rigidbody>();
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
     void Start()
     {
-        rigidbody2d = GetComponent<Rigidbody2D>(); 
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
     public void Launch(Vector2 direction, float force)
