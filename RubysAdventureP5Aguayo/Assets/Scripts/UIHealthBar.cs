@@ -1,13 +1,16 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class UIHealthBar : MonoBehaviour
 {
     public static UIHealthBar instance { get; private set; }
 
     public Image mask;
-    float organizer;
+    float originalSize;
 
     void Awake()
     {
