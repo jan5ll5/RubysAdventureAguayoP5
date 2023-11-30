@@ -19,7 +19,11 @@ public class NonPlayerCharacter : MonoBehaviour
     {
         if (timerDisplay >= 0)
         {
-            dialogBox.SetActive(false);
+            timerDisplay -= Time.deltaTime;
+            if (timerDisplay < 0)
+            {
+                dialogBox.SetActive(false);
+            }
         }
     }
 
